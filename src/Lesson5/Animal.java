@@ -21,4 +21,36 @@
 package Lesson5;
 
 public class Animal {
+    protected String name;
+
+    protected int runLimit = 0;
+    protected int swimLimit = 0;
+    private static int animalCount = 0;
+
+    public Animal (String name) {
+        this.name = name;
+        animalCount++;
+    }
+
+    public static int getAnimalCount() {
+        return animalCount;
+    }
+
+    public void run (int distance) {
+        if (distance <= runLimit) {
+            System.out.println(name + " пробежал(а) " + distance + " м.");
+        } else {
+            System.out.println(name + " не может пробежать " + distance + " м. (максимум " + runLimit + " м.)");
+        }
+    }
+
+    public void swim(int distance) {
+        if (swimLimit == 0) {
+            System.out.println(name + " не умеет плавать");
+        } else if (distance <= swimLimit) {
+            System.out.println(name + " проплыл(а) " + distance + " м.");
+        } else {
+            System.out.println(name + " не может проплыть " + distance + " м. (максимум " + swimLimit + " м.)");
+        }
+    }
 }
