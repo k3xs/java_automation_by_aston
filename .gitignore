@@ -37,3 +37,7 @@ lib/
 *.class
 target/
 build/
+
+# Maven
+/target/
+pom.xml
