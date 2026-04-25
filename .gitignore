@@ -38,6 +38,4 @@ lib/
 target/
 build/
 
-
-/target/
 pom.xml
