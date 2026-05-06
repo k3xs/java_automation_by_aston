@@ -120,5 +120,6 @@ public class SeleniumTest {
         assertTrue(payModal.isDisplayed());
 
         driver.quit();
+
     }
 }
